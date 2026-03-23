@@ -40,10 +40,10 @@ export default function LandingPage() {
             <span className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
             AI-Powered Matching Engine
           </Badge>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4 sm:mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4 sm:mb-6 text-primary">
             Find grants, tenders &amp; funding
             <br />
-            <span className="text-muted-foreground">
+            <span className="text-foreground/60">
               matched to your business
             </span>
           </h1>
@@ -64,7 +64,7 @@ export default function LandingPage() {
       </section>
 
       {/* Stats */}
-      <section className="border-y border-border/40 bg-card/30">
+      <section className="border-y border-border/40 bg-muted/40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
           {[
             { value: "10+", label: "MENA Data Sources" },
@@ -73,7 +73,7 @@ export default function LandingPage() {
             { value: "<5min", label: "Time to First Match" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-2xl font-bold font-mono tracking-tight">
+              <div className="text-2xl font-bold font-mono tracking-tight text-primary">
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground mt-1">
@@ -86,7 +86,7 @@ export default function LandingPage() {
 
       {/* How It Works */}
       <section id="how-it-works" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-24">
-        <h2 className="text-2xl font-bold tracking-tight mb-12">
+        <h2 className="text-2xl font-bold tracking-tight mb-12 text-primary">
           How It Works
         </h2>
         <div className="grid sm:grid-cols-3 gap-6">
@@ -112,7 +112,7 @@ export default function LandingPage() {
           ].map((item) => (
             <Card key={item.step} className="bg-card/50 border-border/50">
               <CardContent className="pt-6">
-                <span className="text-xs font-mono text-muted-foreground">
+                <span className="text-xs font-mono text-primary/70">
                   {item.step}
                 </span>
                 <h3 className="text-lg font-semibold mt-2 mb-3">
@@ -128,9 +128,9 @@ export default function LandingPage() {
       </section>
 
       {/* Opportunity Types */}
-      <section className="border-t border-border/40 bg-card/20">
+      <section className="border-t border-border/40 bg-muted/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-24">
-          <h2 className="text-2xl font-bold tracking-tight mb-12">
+          <h2 className="text-2xl font-bold tracking-tight mb-12 text-primary">
             What We Match
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -166,8 +166,8 @@ export default function LandingPage() {
             ].map((item) => (
               <Card key={item.type} className="bg-card/50 border-border/50">
                 <CardContent className="pt-6">
-                  <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center mb-4">
-                    <span className="font-mono font-bold text-sm">
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <span className="font-mono font-bold text-sm text-primary">
                       {item.icon}
                     </span>
                   </div>
@@ -187,7 +187,7 @@ export default function LandingPage() {
 
       {/* Pricing */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-24">
-        <h2 className="text-2xl font-bold tracking-tight mb-12">Pricing</h2>
+        <h2 className="text-2xl font-bold tracking-tight mb-12 text-primary">Pricing</h2>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
             {

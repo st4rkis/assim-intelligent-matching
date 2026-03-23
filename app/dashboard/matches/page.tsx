@@ -56,7 +56,7 @@ export default function MatchesPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight">Matches</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-primary">Matches</h1>
         <p className="text-muted-foreground text-sm mt-1">
           Opportunities matched to your company profile
         </p>

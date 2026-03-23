@@ -78,7 +78,7 @@ export default function OpportunitiesPage() {
     <div className="space-y-6">
       <div className="space-y-4">
         <div>
-          <h1 className="text-xl sm:text-2xl font-bold tracking-tight">Opportunities</h1>
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-primary">Opportunities</h1>
           <p className="text-muted-foreground text-sm mt-1">
             Browse grants, tenders, financing, and RFPs across the MENA region
           </p>

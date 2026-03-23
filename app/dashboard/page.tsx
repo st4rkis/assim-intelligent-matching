@@ -8,7 +8,7 @@ export default function DashboardOverview() {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold tracking-tight">Dashboard</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-primary">Dashboard</h1>
         <p className="text-muted-foreground text-sm mt-1">
           Your opportunity matching overview
         </p>
@@ -25,7 +25,7 @@ export default function DashboardOverview() {
           <Card key={stat.label} className="bg-card/50 border-border/50">
             <CardContent className="pt-5 pb-4">
               <div className="text-sm text-muted-foreground">{stat.label}</div>
-              <div className="text-2xl font-bold font-mono mt-1">
+              <div className="text-2xl font-bold font-mono mt-1 text-primary">
                 {stat.value}
               </div>
               <div className="text-xs text-muted-foreground/60 mt-1">
