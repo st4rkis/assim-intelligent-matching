@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { LinkButton } from "@/components/ui/link-button";
 
 export default function DashboardOverview() {
   return (
@@ -57,9 +57,9 @@ export default function DashboardOverview() {
         <Card className="border-border/50">
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle className="text-base">Top Matches</CardTitle>
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/dashboard/matches">View All</Link>
-            </Button>
+            <LinkButton href="/dashboard/matches" variant="ghost" size="sm">
+              View All
+            </LinkButton>
           </CardHeader>
           <CardContent>
             <div className="flex flex-col items-center justify-center py-8 text-center">
@@ -80,9 +80,9 @@ export default function DashboardOverview() {
       <Card className="border-border/50">
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className="text-base">Latest Opportunities</CardTitle>
-          <Button variant="ghost" size="sm" asChild>
-            <Link href="/dashboard/opportunities">Browse All</Link>
-          </Button>
+          <LinkButton href="/dashboard/opportunities" variant="ghost" size="sm">
+            Browse All
+          </LinkButton>
         </CardHeader>
         <CardContent>
           <div className="space-y-3">

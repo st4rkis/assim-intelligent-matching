@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/components/ui/link-button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function LandingPage() {
@@ -20,15 +19,16 @@ export default function LandingPage() {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <Link
+            <LinkButton
               href="/dashboard"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              variant="ghost"
+              size="sm"
             >
               Dashboard
-            </Link>
-            <Button size="sm" asChild>
-              <Link href="/dashboard">Get Started</Link>
-            </Button>
+            </LinkButton>
+            <LinkButton href="/dashboard" size="sm">
+              Get Started
+            </LinkButton>
           </div>
         </div>
       </nav>
@@ -53,12 +53,12 @@ export default function LandingPage() {
             opportunities across the MENA region.
           </p>
           <div className="flex gap-3">
-            <Button size="lg" asChild>
-              <Link href="/dashboard">Start Matching</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="#how-it-works">How It Works</Link>
-            </Button>
+            <LinkButton href="/dashboard" size="lg">
+              Start Matching
+            </LinkButton>
+            <LinkButton href="#how-it-works" size="lg" variant="outline">
+              How It Works
+            </LinkButton>
           </div>
         </div>
       </section>
@@ -261,14 +261,14 @@ export default function LandingPage() {
                     </li>
                   ))}
                 </ul>
-                <Button
+                <LinkButton
+                  href="/dashboard"
                   variant={plan.highlight ? "default" : "outline"}
-                  className="w-full"
                   size="sm"
-                  asChild
+                  className="w-full"
                 >
-                  <Link href="/dashboard">{plan.cta}</Link>
-                </Button>
+                  {plan.cta}
+                </LinkButton>
               </CardContent>
             </Card>
           ))}
