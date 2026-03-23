@@ -7,7 +7,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
       <nav className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm font-mono">
@@ -34,25 +34,25 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 pt-24 pb-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-12 sm:pb-16">
         <div className="max-w-3xl">
           <Badge variant="secondary" className="mb-6">
             <span className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse" />
             AI-Powered Matching Engine
           </Badge>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4 sm:mb-6">
             Find grants, tenders &amp; funding
             <br />
             <span className="text-muted-foreground">
               matched to your business
             </span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-xl mb-6 sm:mb-8 leading-relaxed">
             AssIM analyzes your company profile and matches you with government
             grants, tenders, development bank financing, and private sector
             opportunities across the MENA region.
           </p>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <LinkButton href="/dashboard" size="lg">
               Start Matching
             </LinkButton>
@@ -65,7 +65,7 @@ export default function LandingPage() {
 
       {/* Stats */}
       <section className="border-y border-border/40 bg-card/30">
-        <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 grid grid-cols-2 sm:grid-cols-4 gap-8">
           {[
             { value: "10+", label: "MENA Data Sources" },
             { value: "4", label: "Opportunity Types" },
@@ -85,7 +85,7 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="max-w-6xl mx-auto px-6 py-24">
+      <section id="how-it-works" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-24">
         <h2 className="text-2xl font-bold tracking-tight mb-12">
           How It Works
         </h2>
@@ -129,7 +129,7 @@ export default function LandingPage() {
 
       {/* Opportunity Types */}
       <section className="border-t border-border/40 bg-card/20">
-        <div className="max-w-6xl mx-auto px-6 py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-24">
           <h2 className="text-2xl font-bold tracking-tight mb-12">
             What We Match
           </h2>
@@ -186,7 +186,7 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-24">
         <h2 className="text-2xl font-bold tracking-tight mb-12">Pricing</h2>
         <div className="grid sm:grid-cols-3 gap-6">
           {[
@@ -277,8 +277,8 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-border/40">
-        <div className="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
-          <span className="text-sm text-muted-foreground">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <span className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
             AssIM Intelligent Matching — by AssoImpreseMena
           </span>
           <span className="text-xs font-mono text-muted-foreground/50">

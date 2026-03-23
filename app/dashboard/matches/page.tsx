@@ -66,27 +66,27 @@ export default function MatchesPage() {
         {demoMatches.map((match) => (
           <Card key={match.id} className="border-border/50">
             <CardContent className="pt-5">
-              <div className="flex items-start justify-between">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                 <div className="space-y-2 flex-1">
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                     <Badge
                       variant="outline"
                       className="text-xs font-mono capitalize"
                     >
                       {match.opportunityType}
                     </Badge>
-                    <h3 className="font-semibold">
+                    <h3 className="font-semibold text-sm sm:text-base">
                       {match.opportunityTitle}
                     </h3>
                   </div>
-                  <p className="text-sm text-muted-foreground max-w-2xl">
+                  <p className="text-sm text-muted-foreground">
                     {match.summary}
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4 ml-6">
-                  <div className="text-right">
-                    <div className="text-2xl font-bold font-mono">
+                <div className="flex items-center gap-3 sm:gap-4 sm:ml-6">
+                  <div className="text-left sm:text-right">
+                    <div className="text-xl sm:text-2xl font-bold font-mono">
                       {match.combinedScore}
                     </div>
                     <div className="text-xs text-muted-foreground">/ 100</div>
@@ -101,7 +101,7 @@ export default function MatchesPage() {
               </div>
 
               {/* Score Breakdown */}
-              <div className="grid grid-cols-3 gap-4 mt-4 pt-4 border-t border-border/30">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-4 pt-4 border-t border-border/30">
                 {[
                   {
                     label: "Eligibility",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { MobileNav } from "@/components/dashboard/mobile-nav";
 
 const navItems = [
   { href: "/dashboard", label: "Overview" },
@@ -19,8 +20,11 @@ export default function DashboardLayout({
     <div className="min-h-screen bg-background">
       {/* Top nav */}
       <header className="border-b border-border/40 bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+          <div className="flex items-center gap-3 md:gap-6">
+            {/* Mobile hamburger */}
+            <MobileNav />
+
             <Link href="/" className="flex items-center gap-2">
               <div className="h-7 w-7 rounded-md bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xs font-mono">
@@ -31,8 +35,10 @@ export default function DashboardLayout({
                 AssIM
               </span>
             </Link>
-            <Separator orientation="vertical" className="h-5" />
-            <nav className="flex items-center gap-1">
+
+            {/* Desktop nav — hidden on mobile */}
+            <Separator orientation="vertical" className="h-5 hidden md:block" />
+            <nav className="hidden md:flex items-center gap-1">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
@@ -44,8 +50,9 @@ export default function DashboardLayout({
               ))}
             </nav>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-1 rounded">
+
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-1 rounded hidden sm:inline-block">
               Free Plan
             </span>
             <Button variant="outline" size="sm">
@@ -56,7 +63,7 @@ export default function DashboardLayout({
       </header>
 
       {/* Content */}
-      <main className="max-w-7xl mx-auto px-6 py-8">{children}</main>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">{children}</main>
     </div>
   );
 }

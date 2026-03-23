@@ -15,7 +15,7 @@ export default function DashboardOverview() {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {[
           { label: "Company Profiles", value: "0", change: "Add your first" },
           { label: "Active Opportunities", value: "0", change: "Syncing..." },
@@ -37,7 +37,7 @@ export default function DashboardOverview() {
       </div>
 
       {/* Quick Actions */}
-      <div className="grid sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {/* Profile Card */}
         <Card className="border-border/50">
           <CardHeader>

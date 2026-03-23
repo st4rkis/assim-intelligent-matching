@@ -58,9 +58,9 @@ function ConfidenceBadge({ score }: { score: number }) {
 export default function ProfilePage() {
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight">
             Company Profile
           </h1>
           <p className="text-muted-foreground text-sm mt-1">
@@ -80,15 +80,15 @@ export default function ProfilePage() {
       {/* Profile Header */}
       <Card className="border-border/50">
         <CardContent className="pt-6">
-          <div className="flex items-start gap-6">
-            <div className="h-16 w-16 rounded-xl bg-muted flex items-center justify-center shrink-0">
-              <span className="font-bold text-xl font-mono text-muted-foreground">
+          <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+            <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-xl bg-muted flex items-center justify-center shrink-0">
+              <span className="font-bold text-lg sm:text-xl font-mono text-muted-foreground">
                 {demoProfile.name.charAt(0)}
               </span>
             </div>
             <div className="flex-1 space-y-2">
-              <div className="flex items-center gap-3">
-                <h2 className="text-xl font-bold">{demoProfile.name}</h2>
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                <h2 className="text-lg sm:text-xl font-bold">{demoProfile.name}</h2>
                 <Badge variant="outline" className="text-xs font-mono uppercase">
                   {demoProfile.sizeCategory}
                 </Badge>
@@ -99,7 +99,7 @@ export default function ProfilePage() {
               <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl">
                 {demoProfile.aiSummary}
               </p>
-              <div className="flex items-center gap-4 pt-1">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-1">
                 <span className="text-xs text-muted-foreground">
                   <span className="font-mono">{demoProfile.websiteUrl}</span>
                 </span>
@@ -119,7 +119,7 @@ export default function ProfilePage() {
         </CardContent>
       </Card>
 
-      <div className="grid lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {/* Classification */}
         <Card className="border-border/50">
           <CardHeader>
